@@ -36,6 +36,7 @@ function draw() {
   }
 }*/
 
+let room = 4;
 let arrayColor;
 let arrayColorTest;
 let quadCount;
@@ -81,7 +82,7 @@ function setup() {
   let arrayColorPalette5 = [color(r,g,b), color(r,g,b), color(r,g,b), color(r,g,b), color(r,g,b), color(r,g,b)];
   arrayColor = [arrayColorPalette1, arrayColorPalette2, arrayColorPalette3, arrayColorPalette4, arrayColorPalette5 ];
   **/
-  arrayColorTest = [color(122,199,79), color(204,255,102), color(93,46,140), color(224,200,121), color(232,116,97), color(145, 25, 200), color(15, 25, 200)];
+  arrayColorTest = [color(122,199,79), color(204,255,102), color(93,46,140), color(224,200,121), color(232,116,97), color(145, 25, 200), color(15, 25, 200), color(89, 125, 22)];
   bgColor = color(160)
   rectColor = color(237,0,62,20)
   thiccTotal = 0;
@@ -113,7 +114,7 @@ function setup() {
 
 
 
-  console.log(arrayThicc);
+
   randomColor = color(random(255), random(255),random(255));
   randomColor2 = color(random(255), random(255),random(255));
   randomColor3 = color(random(255), random(255),random(255));
@@ -139,7 +140,6 @@ function test() {
     let ran = random (3, 15);
     arrayThicc.push(ran);
   }
-
 }
 
 function draw() {
@@ -148,7 +148,8 @@ function draw() {
   corX = startX;
   corY = startY;
   thiccTotal = 0;
-  for (let i = 0; i < arrayColorTest.length; i++) {
+//  for (let i = 0; i < arrayColorTest.length; i++) {
+  for (let i = 0; i < room; i++) {
     fill(arrayColorTest[i]);
     beginShape();
     vertex(corX, corY); //100 390
